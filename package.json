@@ -1,0 +1,28 @@
+{
+  "name": "terminal-bar",
+  "version": "0.0.0",
+  "description": "bar graphs for the terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nabraham/terminal-bar.git"
+  },
+  "keywords": [
+    "terminal",
+    "graph",
+    "bar",
+    "chart"
+  ],
+  "author": "Nathan Abraham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nabraham/terminal-bar/issues"
+  },
+  "dependencies": {
+    "colors": "~1.0.1",
+    "lodash": "~2.4.1"
+  }
+}
