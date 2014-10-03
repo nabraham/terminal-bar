@@ -29,8 +29,11 @@ module.exports = function(series, options) {
     }
 
     options = options ? options : {};
+    if (options.color && !Array.isArray(options.color)) {
+        options.color = ['red', 'blue', 'green', 'yellow', 'cyan']; 
+    }
+
     options.icon = options.icon? options.icon : 'xo+*^@';
-    options.color = options.color? options.color : ['red', 'blue', 'green', 'yellow', 'cyan'];
     options.height = options.height ? options.height : 24;
 
     var m = createMatrix(series, options);
@@ -45,7 +48,7 @@ function createMatrix(series, options) {
         var serum = series[s];
         var marker = {};
         marker.icon = options.icon[s % options.icon.length];
-        marker.color = options.color[s % options.color.length];
+        marker.color = options.color ? options.color[s % options.color.length] : undefined;
         for (var i=0; i < serum.length; i++) {
             for (var j=0; j < serum[i]*options.height / max; j++) {
                 var x = i*series.length + s;
@@ -74,7 +77,9 @@ function drawMatrix(m, series, options) {
                 rez += spacer;
             }
         }
-        rez += '\n';
+        if (j < (options.height - 1)) {
+            rez += '\n';
+        }
     }
     return rez;
 }
