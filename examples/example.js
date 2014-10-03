@@ -12,7 +12,7 @@ for (var i=0; i<50; i++) {
 }
 
 var series = [s1, s2, s3];
-console.log(bar(series, {title: 'Trig Waves'}));
+console.log(bar(series, {title: 'Trig Waves', color: true}));
 
 series = [[1,2,3],[1,1,1]];
 console.log(bar(series, {height: 9, width: 30, icon: '##'}));
