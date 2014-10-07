@@ -17,17 +17,4 @@ console.log(bar(series, {title: 'Trig Waves', color: true}));
 series = [[1,2,3],[1,1,1]];
 console.log(bar(series, {height: 9, width: 30, icon: '##'}));
 
-var failures = [
-    (function () { bar(123, {}) }),
-    (function () { bar([], {}) }),
-    (function () { bar([[1,2,3],[1]], {}) }),
-    (function () { bar([[1,2,3],[1,2,'three']], {}) })
-]
-
-failures.forEach(function(f) {
-    try {
-        f();
-    } catch (e) {
-        console.log(e);
-    }
-});
+console.log('\n%s', bar([1,2,3,4,5], {height: 5, width: 30, icon: 'x'}));

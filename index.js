@@ -7,7 +7,7 @@ module.exports = function(series, options) {
         throw new Error('series must be an array of numbers or an array of equal length arrays of numbers');
     }
 
-    if (series.length === 0) {
+    if (_.flatten(series).length === 0) {
         throw new Error('Series must be of length > 0');
     }
 
@@ -73,7 +73,7 @@ function drawMatrix(m, series, options) {
         for (var i=0; i<width; i++) {
             var element = m[coordinate_hash(i,options.height - j - 1)];
             rez += element ? colorElement(element) : ' ';
-            if (i > 0 && ((i % nSeries) === (nSeries - 1))) {
+            if ((i % nSeries) === (nSeries - 1) && i < (width -1)) {
                 rez += spacer;
             }
         }
