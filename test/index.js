@@ -1,5 +1,5 @@
 var assert = require('assert')
-  , bar = require('../index');
+  , bar = require('../lib-cov/index');
 
 describe('failure conditions', function() {
 

@@ -1,4 +1,4 @@
-var bar = require('../index');
+var bar = require('../lib/index');
 
 var s1 = [];
 var s2 = [];

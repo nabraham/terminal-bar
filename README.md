@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nabraham/terminal-bar.svg?branch=master)](https://travis-ci.org/nabraham/terminal-bar)
+
 # terminal-bar
 Simple bar graphs for the terminal
 

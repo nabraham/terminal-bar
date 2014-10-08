@@ -4,7 +4,7 @@
   "description": "bar graphs for the terminal",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "./node_modules/.bin/jscoverage lib lib-cov && mocha test"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,9 @@
     "lodash": "~2.4.1"
   },
   "devDependencies": {
-    "mocha": "^1.21.4"
+    "coveralls": "^2.11.2",
+    "jscoverage": "^0.5.6",
+    "mocha": "^1.21.4",
+    "mocha-lcov-reporter": "0.0.1"
   }
 }
