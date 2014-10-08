@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/nabraham/terminal-bar.svg?branch=master)](https://travis-ci.org/nabraham/terminal-bar)
+[![Coverage Status](https://coveralls.io/repos/nabraham/terminal-bar/badge.png)](https://coveralls.io/r/nabraham/terminal-bar)
 
 # terminal-bar
 Simple bar graphs for the terminal
