@@ -3,3 +3,4 @@ node_modules/*
 npm-debug.log
 index-cov.js
 lib-cov/**
+coverage.html

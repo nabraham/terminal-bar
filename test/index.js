@@ -1,5 +1,6 @@
 var assert = require('assert')
-  , bar = require('../lib-cov/index');
+  , bar = require('../lib-cov/index')
+  , colors = require('colors');
 
 describe('failure conditions', function() {
 
@@ -24,17 +25,21 @@ describe('failure conditions', function() {
 
 describe('Single series ', function() {
     it('should produce the right graphs', function() {
-        assert.equal('x', bar([1], {height: 1}), 'single x');
-        assert.equal('o', bar([1], {height: 1, icon: 'o'}), 'single o');
-        assert.equal('x\nx', bar([1], {height: 2}), 'single x, height 2');
-        assert.equal('xx', bar([1, 1], {height: 1}), 'double x, height 1');
-        assert.equal('x  x', bar([1, 1], {height: 1, width: 4}), 'double x, width: 4');
+        assert.equal(bar([1],{height:1}),            'x',     'single x');
+        assert.equal(bar([1],{height:1, icon: 'o'}), 'o',     'single o');
+        assert.equal(bar([1],{height:2}),            'x\nx',  'single x, height 2');
+        assert.equal(bar([1,1],{height:1}),          'xx',    'double x, height 1');
+        assert.equal(bar([1,1],{height:1,width:4}),  'x  x',  'double x, width: 4');
+        assert.equal(bar([1],{height:1,color:true}), 'x'.red, 'single red x');
     });
 });
 
 describe('Multiple series ', function() {
     it('should produce the right graphs', function() {
-        assert.equal('xo', bar([[1],[1]], {height: 1}), 'single x, single o');
-        assert.equal('  x \nxoxo', bar([[1,2],[1,1]], {height: 2}), 'double x, double o');
+        assert.equal(bar([[1],[1]],{height:1}),       'xo',         'single x, single o');
+        assert.equal(bar([[1,2],[1,1]], {height: 2}), '  x \nxoxo', 'double x, double o');
+        var actual = bar([[1],[1],[1],[1],[1]], {height:1, color:true, icon:'12345'});
+        var expected = '1'.red + '2'.blue + '3'.green + '4'.yellow + '5'.cyan;
+        assert.equal(actual, expected, 'rainbow 12345');
     });
 });

@@ -1,6 +1,6 @@
 {
   "name": "terminal-bar",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "bar graphs for the terminal",
   "main": "index.js",
   "scripts": {
