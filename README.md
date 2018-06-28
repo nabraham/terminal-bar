@@ -6,12 +6,12 @@ Simple bar graphs for the terminal
 
 ![trig waves](images/trig_waves.png)
 
-###Installation
+### Installation
 ```
 npm install terminal-bar
 ```
 
-###Basic Usage
+### Basic Usage
 ```
 var bar = require('terminal-bar')
   , data = [1, 2, 3, 4, 5];
@@ -28,7 +28,7 @@ produces:
 xxxxx
 ```
 
-###Multiple Series
+### Multiple Series
 ```
 console.log(bar([[1,2,3,4,5],[8,7,6,5,4]], {height: 8}))
 
@@ -41,7 +41,7 @@ console.log(bar([[1,2,3,4,5],[8,7,6,5,4]], {height: 8}))
  oxoxoxoxo
 xoxoxoxoxo
 ```
-###Horizontal Spacing
+### Horizontal Spacing
 ```
 console.log(bar([[1,2,3,4,5],[8,7,6,5,4]], {height: 8, width: 30}))
 
@@ -55,13 +55,13 @@ console.log(bar([[1,2,3,4,5],[8,7,6,5,4]], {height: 8, width: 30}))
 xo        xo        xo        xo        xo
 ```
 
-###Colored
+### Colored
 ```
 console.log(bar([[1,2,3,4,5],[8,7,6,5,4]], {height: 8, width: 30, color: true}))
 ```
 ![basic colors](images/basic_colors.png)
 
-###Advanced
+### Advanced
 ```
 bar(series, options)
 
